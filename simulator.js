@@ -38,3 +38,13 @@ function animate() {
 }
 
 animate();
+const carGeometry = new THREE.BoxGeometry(2, 1, 4);
+const carMaterial = new THREE.MeshBasicMaterial({
+    color: 0x1565c0
+});
+const carBody = new THREE.Mesh(
+    carGeometry,
+    carMaterial
+);
+scene.add(carBody);
+carBody.position.y = 0.5;
