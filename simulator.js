@@ -90,9 +90,9 @@ function createWheel(x, y, z) {
 
     return wheel;
 }
-animate();
 const frontLeftWheel = createWheel(-1.2, 0.5, -1.2);
 const frontRightWheel = createWheel(1.2, 0.5, -1.2);
 
 const rearLeftWheel = createWheel(-1.2, 0.5, 1.2);
 const rearRightWheel = createWheel(1.2, 0.5, 1.2);
+animate();
