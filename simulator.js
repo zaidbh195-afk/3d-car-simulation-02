@@ -40,6 +40,9 @@ function animate() {
 
 animate();
 const carGeometry = new THREE.BoxGeometry(2, 1, 4);
+const car = new THREE.Group();
+
+scene.add(car);
 const carMaterial = new THREE.MeshBasicMaterial({
     color: 0x1565c0
 });
@@ -47,7 +50,7 @@ const carBody = new THREE.Mesh(
     carGeometry,
     carMaterial
 );
-scene.add(carBody);
+car.add(carBody);
 carBody.position.y = 0.5;
 const wheelGeometry = new THREE.CylinderGeometry(
     0.5,
@@ -70,7 +73,7 @@ function createWheel(x, y, z) {
 
     wheel.rotation.z = Math.PI / 2;
 
-    scene.add(wheel);
+    car.add(wheel);
 
     return wheel;
 }
