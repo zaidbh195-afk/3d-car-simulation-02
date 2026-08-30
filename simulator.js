@@ -48,3 +48,34 @@ const carBody = new THREE.Mesh(
 );
 scene.add(carBody);
 carBody.position.y = 0.5;
+const wheelGeometry = new THREE.CylinderGeometry(
+    0.5,
+    0.5,
+    0.4,
+    32
+);
+
+const wheelMaterial = new THREE.MeshBasicMaterial({
+    color: 0x111111
+});
+function createWheel(x, y, z) {
+
+    const wheel = new THREE.Mesh(
+        wheelGeometry,
+        wheelMaterial
+    );
+
+    wheel.position.set(x, y, z);
+
+    wheel.rotation.z = Math.PI / 2;
+
+    scene.add(wheel);
+
+    return wheel;
+}
+const frontLeftWheel = createWheel(-1.1, 0.5, -1.2);
+const frontRightWheel = createWheel(1.1, 0.5, -1.2);
+
+const rearLeftWheel = createWheel(-1.1, 0.5, 1.2);
+const rearRightWheel = createWheel(1.1, 0.5, 1.2);
+
