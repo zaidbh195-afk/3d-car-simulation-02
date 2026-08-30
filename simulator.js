@@ -52,7 +52,6 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-animate();
 const carGeometry = new THREE.BoxGeometry(2, 1, 4);
 const car = new THREE.Group();
 
@@ -91,6 +90,7 @@ function createWheel(x, y, z) {
 
     return wheel;
 }
+animate();
 const frontLeftWheel = createWheel(-1.2, 0.5, -1.2);
 const frontRightWheel = createWheel(1.2, 0.5, -1.2);
 
