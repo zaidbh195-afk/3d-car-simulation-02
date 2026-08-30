@@ -78,4 +78,3 @@ const frontRightWheel = createWheel(1.1, 0.5, -1.2);
 
 const rearLeftWheel = createWheel(-1.1, 0.5, 1.2);
 const rearRightWheel = createWheel(1.1, 0.5, 1.2);
-
