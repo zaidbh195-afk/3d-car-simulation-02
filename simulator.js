@@ -32,9 +32,23 @@ const ground = new THREE.Mesh(
 scene.add(ground);
 
 ground.rotation.x = -Math.PI / 2;
+// Physics
+let u = 0;       // initial velocity (m/s)
+let a = 3;       // acceleration (m/s²)
+let t = 0;       // time (s)
+let dt = 0.016;  // simulation time step
 function animate() {
     requestAnimationFrame(animate);
 
+    // Calculate velocity
+    const v = u + a * t;
+
+    // Move the entire vehicle
+    car.position.x -= v * dt;
+
+    // Advance simulation time
+    t += dt;
+    
     renderer.render(scene, camera);
 }
 
