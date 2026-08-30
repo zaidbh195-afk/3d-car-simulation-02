@@ -31,4 +31,10 @@ const ground = new THREE.Mesh(
 scene.add(ground);
 
 ground.rotation.x = -Math.PI / 2;
-ground.rotation.x = -Math.PI / 2;
+function animate() {
+    requestAnimationFrame(animate);
+
+    renderer.render(scene, camera);
+}
+
+animate();
