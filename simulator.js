@@ -15,7 +15,8 @@ renderer.setSize(
 );
 
 document.body.appendChild(renderer.domElement);
-camera.position.set(0, 3, 8);
+camera.position.set(6, 4, 8);
+camera.lookAt(0, 0, 0);
 const groundGeometry = new THREE.PlaneGeometry(100, 100);
 
 const groundMaterial = new THREE.MeshBasicMaterial({
@@ -51,7 +52,7 @@ carBody.position.y = 0.5;
 const wheelGeometry = new THREE.CylinderGeometry(
     0.5,
     0.5,
-    0.4,
+    0.5,
     32
 );
 
@@ -73,8 +74,8 @@ function createWheel(x, y, z) {
 
     return wheel;
 }
-const frontLeftWheel = createWheel(-1.1, 0.5, -1.2);
-const frontRightWheel = createWheel(1.1, 0.5, -1.2);
+const frontLeftWheel = createWheel(-1.2, 0.5, -1.2);
+const frontRightWheel = createWheel(1.2, 0.5, -1.2);
 
-const rearLeftWheel = createWheel(-1.1, 0.5, 1.2);
-const rearRightWheel = createWheel(1.1, 0.5, 1.2);
+const rearLeftWheel = createWheel(-1.2, 0.5, 1.2);
+const rearRightWheel = createWheel(1.2, 0.5, 1.2);
